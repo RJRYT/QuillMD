@@ -68,6 +68,31 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			gridTemplateColumns: {
+				'auto-fit': 'repeat(auto-fit, minmax(var(--card-min-width), 1fr))',
+				'auto-fill': 'repeat(auto-fill, minmax(var(--card-min-width), 1fr))',
+			},
+			gap: {
+				'fluid': 'var(--grid-gap)',
+			},
+			fontSize: {
+				'fluid-xs': 'var(--text-xs)',
+				'fluid-sm': 'var(--text-sm)',
+				'fluid-base': 'var(--text-base)',
+				'fluid-lg': 'var(--text-lg)',
+				'fluid-xl': 'var(--text-xl)',
+				'fluid-2xl': 'var(--text-2xl)',
+				'fluid-3xl': 'var(--text-3xl)',
+				'fluid-4xl': 'var(--text-4xl)',
+			},
+			spacing: {
+				'fluid-xs': 'var(--space-xs)',
+				'fluid-sm': 'var(--space-sm)',
+				'fluid-md': 'var(--space-md)',
+				'fluid-lg': 'var(--space-lg)',
+				'fluid-xl': 'var(--space-xl)',
+				'fluid-2xl': 'var(--space-2xl)',
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -92,5 +117,15 @@ export default {
 			}
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		// Container queries plugin (optional - modern browser support)
+		function({ addUtilities }: any) {
+			addUtilities({
+				'.container-lg': {
+					'container-type': 'inline-size',
+				},
+			});
+		},
+	],
 } satisfies Config;

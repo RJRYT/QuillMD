@@ -2,26 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Blog Design System - Clean & Minimal Typography-focused */
+/* Frost+Soft Design System - Modern Glassmorphism with Responsive Typography */
 
 @layer base {
   :root {
-    /* Core Colors - Warm & Professional */
-    --background: 0 0% 100%;
+    /* Core Colors - Frost+Soft Theme */
+    --background: 210 15% 98%;
     --foreground: 215 28% 17%;
     
-    /* Content Areas */
-    --card: 0 0% 100%;
-    --card-foreground: 215 28% 17%;
+    /* Glass Surface Effects */
+    --glass-background: 210 40% 98%;
+    --glass-border: 210 25% 88%;
+    --glass-shadow: 215 25% 27%;
     
-    --popover: 0 0% 100%;
+    /* Content Areas */
+    --card: 210 40% 98%;
+    --card-foreground: 215 28% 17%;
+    --card-glass: 210 40% 98% / 0.8;
+    --card-glass-border: 210 25% 88% / 0.3;
+    
+    --popover: 210 40% 98%;
     --popover-foreground: 215 28% 17%;
     
-    /* Brand Colors - Deep Blue */
+    /* Brand Colors - Soft Blue Gradient */
     --primary: 215 84% 32%;
     --primary-foreground: 0 0% 100%;
+    --primary-soft: 215 60% 55%;
+    --primary-gradient: linear-gradient(135deg, hsl(215, 84%, 32%), hsl(215, 60%, 55%));
     
-    /* Subtle Accents */
+    /* Accent Gradients */
     --secondary: 215 16% 96%;
     --secondary-foreground: 215 28% 17%;
     
@@ -30,6 +39,8 @@
     
     --accent: 25 95% 53%;
     --accent-foreground: 0 0% 100%;
+    --accent-soft: 25 75% 65%;
+    --accent-gradient: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(25, 75%, 65%));
     
     /* Status Colors */
     --destructive: 0 84% 60%;
@@ -40,44 +51,75 @@
     --input: 215 20% 88%;
     --ring: 215 84% 32%;
     
+    /* Neumorphic Shadows */
+    --shadow-neumorphic-light: 0 8px 32px -8px hsl(215 25% 27% / 0.1);
+    --shadow-neumorphic-medium: 0 16px 48px -12px hsl(215 25% 27% / 0.15);
+    --shadow-neumorphic-heavy: 0 24px 64px -16px hsl(215 25% 27% / 0.2);
+    
     /* Design System */
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    
+    /* Fluid Typography */
+    --text-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem);
+    --text-sm: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+    --text-base: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
+    --text-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+    --text-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+    --text-2xl: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
+    --text-3xl: clamp(1.875rem, 1.6rem + 1vw, 2.5rem);
+    --text-4xl: clamp(2.25rem, 1.9rem + 1.4vw, 3rem);
+    
+    /* Spacing System */
+    --space-xs: clamp(0.5rem, 0.4rem + 0.4vw, 0.75rem);
+    --space-sm: clamp(0.75rem, 0.6rem + 0.6vw, 1rem);
+    --space-md: clamp(1rem, 0.8rem + 0.8vw, 1.5rem);
+    --space-lg: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
+    --space-xl: clamp(2rem, 1.6rem + 1.6vw, 3rem);
+    --space-2xl: clamp(3rem, 2.4rem + 2.4vw, 4rem);
     
     /* Blog-specific tokens */
     --content-width: 65ch;
     --sidebar-width: 20rem;
     --header-height: 4rem;
+    
+    /* Grid System */
+    --grid-gap: clamp(1rem, 2vw, 2rem);
+    --card-min-width: 280px;
 
-    --sidebar-background: 0 0% 98%;
-
+    --sidebar-background: 210 40% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
-    /* Dark theme for blog */
+    /* Dark theme - Frost+Soft */
     --background: 215 28% 8%;
     --foreground: 215 20% 92%;
     
+    /* Glass Surface Effects - Dark */
+    --glass-background: 215 28% 10%;
+    --glass-border: 215 25% 25%;
+    --glass-shadow: 215 50% 5%;
+    
     --card: 215 28% 10%;
     --card-foreground: 215 20% 92%;
+    --card-glass: 215 28% 10% / 0.8;
+    --card-glass-border: 215 25% 25% / 0.3;
     
     --popover: 215 28% 10%;
     --popover-foreground: 215 20% 92%;
     
     --primary: 215 84% 55%;
     --primary-foreground: 215 28% 8%;
+    --primary-soft: 215 60% 70%;
+    --primary-gradient: linear-gradient(135deg, hsl(215, 84%, 55%), hsl(215, 60%, 70%));
     
     --secondary: 215 28% 15%;
     --secondary-foreground: 215 20% 92%;
@@ -87,6 +129,8 @@
     
     --accent: 25 95% 53%;
     --accent-foreground: 215 28% 8%;
+    --accent-soft: 25 75% 65%;
+    --accent-gradient: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(25, 75%, 65%));
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 215 20% 92%;
@@ -94,6 +138,11 @@
     --border: 215 28% 20%;
     --input: 215 28% 20%;
     --ring: 215 84% 55%;
+    
+    /* Neumorphic Shadows - Dark */
+    --shadow-neumorphic-light: 0 8px 32px -8px hsl(215 50% 5% / 0.3);
+    --shadow-neumorphic-medium: 0 16px 48px -12px hsl(215 50% 5% / 0.4);
+    --shadow-neumorphic-heavy: 0 24px 64px -16px hsl(215 50% 5% / 0.5);
   }
 }
 
@@ -104,5 +153,106 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+  
+  /* Fluid Typography Classes */
+  .text-fluid-xs { font-size: var(--text-xs); }
+  .text-fluid-sm { font-size: var(--text-sm); }
+  .text-fluid-base { font-size: var(--text-base); }
+  .text-fluid-lg { font-size: var(--text-lg); }
+  .text-fluid-xl { font-size: var(--text-xl); }
+  .text-fluid-2xl { font-size: var(--text-2xl); }
+  .text-fluid-3xl { font-size: var(--text-3xl); }
+  .text-fluid-4xl { font-size: var(--text-4xl); }
+  
+  /* Fluid Spacing Classes */
+  .space-fluid-xs { gap: var(--space-xs); }
+  .space-fluid-sm { gap: var(--space-sm); }
+  .space-fluid-md { gap: var(--space-md); }
+  .space-fluid-lg { gap: var(--space-lg); }
+  .space-fluid-xl { gap: var(--space-xl); }
+  .space-fluid-2xl { gap: var(--space-2xl); }
+}
+
+@layer components {
+  /* Frost+Soft Blog Grid System */
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
+    gap: var(--grid-gap);
+  }
+  
+  /* Glass Morphism Effects */
+  .glass-card {
+    background: hsl(var(--card-glass));
+    border: 1px solid hsl(var(--card-glass-border));
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .glass-card-fallback {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+  }
+  
+  /* Neumorphic Shadows */
+  .shadow-neumorphic-light { box-shadow: var(--shadow-neumorphic-light); }
+  .shadow-neumorphic-medium { box-shadow: var(--shadow-neumorphic-medium); }
+  .shadow-neumorphic-heavy { box-shadow: var(--shadow-neumorphic-heavy); }
+  
+  /* Gradient Text */
+  .text-gradient-primary {
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-accent {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Blog Card Hover Effects */
+  .blog-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(0);
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-neumorphic-medium);
+  }
+  
+  /* Container Queries Fallback */
+  @container (max-width: 400px) {
+    .blog-card-responsive {
+      flex-direction: column;
+    }
+  }
+  
+  /* Focus States for Accessibility */
+  .blog-card:focus-within {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+  
+  /* Skeleton Loading Animation */
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      hsl(var(--muted)) 25%,
+      hsl(var(--muted) / 0.5) 50%,
+      hsl(var(--muted)) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+  }
+  
+  @keyframes skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
   }
 }
