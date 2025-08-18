@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="QuillMD logo">
+  <defs>
+    <linearGradient id="qm-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- rounded tile -->
+  <rect x="16" y="16" width="224" height="224" rx="40" fill="url(#qm-grad)"/>
+  <!-- subtle frost ring for glassy feel -->
+  <circle cx="128" cy="128" r="84" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="14"/>
+
+  <!-- Quill + Markdown brackets -->
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left bracket < -->
+    <path d="M74 100 L54 128 L74 156" stroke-width="10"/>
+    <!-- right bracket > -->
+    <path d="M182 100 L202 128 L182 156" stroke-width="10"/>
+
+    <!-- quill shaft -->
+    <path d="M96 164c36-16 64-46 78-86 0 0-45 12-76 40-28 25-34 60-34 60 0 0 35 0 62-14" stroke-width="10"/>
+    <!-- quill tip highlight -->
+    <path d="M170 66c-8 24-28 48-48 62" stroke-width="10"/>
+  </g>
+</svg>

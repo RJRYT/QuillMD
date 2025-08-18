@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="160" viewBox="0 0 640 160" role="img" aria-label="QuillMD wordmark">
+  <defs>
+    <linearGradient id="qm-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="50%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- mark -->
+  <rect x="10" y="16" width="128" height="128" rx="28" fill="url(#qm-grad)"/>
+  <circle cx="74" cy="80" r="44" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="10"/>
+  <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M42 104 L30 80 L42 56" stroke-width="7"/>    <!-- < -->
+    <path d="M106 56 L118 80 L106 104" stroke-width="7"/> <!-- > -->
+    <path d="M48 112c20-8 35-24 42-44 0 0-24 6-41 22-16 14-18 36-18 36 0 0 20 0 34-8" stroke-width="7"/>
+    <path d="M92 38c-5 12-16 24-26 32" stroke-width="7"/>
+  </g>
+
+  <!-- wordmark -->
+  <g transform="translate(160,30)">
+    <text x="0" y="54" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Inter',sans-serif" font-weight="800" font-size="56" fill="url(#qm-grad)">Quill</text>
+    <text x="192" y="54" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Inter',sans-serif" font-weight="900" font-size="56" fill="#0B1220">MD</text>
+    <text x="0" y="96" font-family="ui-sans-serif,system-ui" font-size="16" fill="#64748B" letter-spacing=".14em">BACKENDLESS • MARKDOWN • BLOG</text>
+  </g>
+</svg>
