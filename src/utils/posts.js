@@ -3,12 +3,19 @@
  * Uses Vite's import.meta.glob to load posts at build time for better performance
  */
 
-import matter from 'gray-matter';
+import { Buffer } from "buffer";
+
+if (typeof globalThis.Buffer === "undefined") {
+  globalThis.Buffer = Buffer;
+}
+
+import matter from "gray-matter";
 
 // Eagerly load all markdown files from posts directory
-const postModules = import.meta.glob('/src/posts/*.md', { 
-  eager: true, 
-  as: 'raw' 
+const postModules = import.meta.glob("/src/posts/*.md", {
+  eager: true,
+  query: "?raw",
+  import: "default",
 });
 
 /**
@@ -18,25 +25,25 @@ const postModules = import.meta.glob('/src/posts/*.md', {
 export function getAllPosts() {
   const posts = Object.entries(postModules).map(([path, content]) => {
     const { data, content: body } = matter(content);
-    const slug = path.split('/').pop().replace('.md', '');
-    
+    const slug = path.split("/").pop().replace(".md", "");
+
     return {
       slug,
-      title: data.title || 'Untitled',
+      title: data.title || "Untitled",
       date: data.date || new Date().toISOString(),
       tags: data.tags || [],
-      excerpt: data.excerpt || '',
+      excerpt: data.excerpt || "",
       cover: data.cover || null,
       draft: data.draft || false,
       content: body,
-      ...data
+      ...data,
     };
   });
 
   // Filter out drafts in production
-  const filteredPosts = import.meta.env.DEV 
-    ? posts 
-    : posts.filter(post => !post.draft);
+  const filteredPosts = import.meta.env.DEV
+    ? posts
+    : posts.filter((post) => !post.draft);
 
   // Sort by date (newest first)
   return filteredPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -49,7 +56,7 @@ export function getAllPosts() {
  */
 export function getPostBySlug(slug) {
   const posts = getAllPosts();
-  return posts.find(post => post.slug === slug) || null;
+  return posts.find((post) => post.slug === slug) || null;
 }
 
 /**
@@ -59,10 +66,8 @@ export function getPostBySlug(slug) {
  */
 export function getPostsByTag(tag) {
   const posts = getAllPosts();
-  return posts.filter(post => 
-    post.tags.some(postTag => 
-      postTag.toLowerCase() === tag.toLowerCase()
-    )
+  return posts.filter((post) =>
+    post.tags.some((postTag) => postTag.toLowerCase() === tag.toLowerCase())
   );
 }
 
@@ -88,7 +93,7 @@ export function getPaginatedPosts(page = 1, perPage = 10) {
     hasNextPage: page < totalPages,
     hasPrevPage: page > 1,
     nextPage: page < totalPages ? page + 1 : null,
-    prevPage: page > 1 ? page - 1 : null
+    prevPage: page > 1 ? page - 1 : null,
   };
 }
 
@@ -100,8 +105,8 @@ export function getAllTags() {
   const posts = getAllPosts();
   const tagCounts = {};
 
-  posts.forEach(post => {
-    post.tags.forEach(tag => {
+  posts.forEach((post) => {
+    post.tags.forEach((tag) => {
       tagCounts[tag] = (tagCounts[tag] || 0) + 1;
     });
   });
@@ -119,9 +124,9 @@ export function getAllTags() {
  */
 export function getRecentPosts(excludeSlug = null, limit = 5) {
   const posts = getAllPosts();
-  const filtered = excludeSlug 
-    ? posts.filter(post => post.slug !== excludeSlug)
+  const filtered = excludeSlug
+    ? posts.filter((post) => post.slug !== excludeSlug)
     : posts;
-  
+
   return filtered.slice(0, limit);
 }
