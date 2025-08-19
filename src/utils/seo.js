@@ -90,28 +90,30 @@ export function generateArticleStructuredData(post) {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": post.title,
-    "description": post.excerpt,
-    "image": post.cover ? `${siteUrl}${post.cover}` : `${siteUrl}/images/og-default.jpg`,
-    "author": {
+    headline: post.title,
+    description: post.excerpt,
+    image: post.cover
+      ? `${siteUrl}${post.cover}`
+      : `${siteUrl}/brand/quillmd-horizontal.svg`,
+    author: {
       "@type": "Person",
-      "name": "Blog Author"
+      name: "Blog Author",
     },
-    "publisher": {
+    publisher: {
       "@type": "Organization",
-      "name": "QuillMD",
-      "logo": {
+      name: "QuillMD",
+      logo: {
         "@type": "ImageObject",
-        "url": `${siteUrl}/brand/quillmd-mark.svg`
-      }
+        url: `${siteUrl}/brand/quillmd-mark.svg`,
+      },
     },
-    "datePublished": post.date,
-    "dateModified": post.date,
-    "mainEntityOfPage": {
+    datePublished: post.date,
+    dateModified: post.date,
+    mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `${siteUrl}/post/${post.slug}`
+      "@id": `${siteUrl}/post/${post.slug}`,
     },
-    "keywords": post.tags.join(', ')
+    keywords: post.tags.join(", "),
   };
 
   return JSON.stringify(structuredData);

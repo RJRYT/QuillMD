@@ -8,9 +8,13 @@ const OFFLINE_URL = '/offline.html';
 
 // App shell resources to cache
 const APP_SHELL = [
-  '/',
-  '/offline.html',
-  '/manifest.webmanifest',
+  "/",
+  "/offline.html",
+  "/manifest.webmanifest",
+  "/images/logo/icon-192x192.png",
+  "/favicon.ico",
+  "/brand/quillmd-mark.svg",
+  "/brand/quillmd-horizontal.svg",
   // Add other critical resources
 ];
 
@@ -119,26 +123,26 @@ self.addEventListener('push', (event) => {
   console.log('Push message received');
   
   const options = {
-    body: event.data ? event.data.text() : 'New content available!',
-    icon: '/images/icon-192.png',
-    badge: '/images/icon-192.png',
+    body: event.data ? event.data.text() : "New content available!",
+    icon: "/images/logo/icon-192x192.png",
+    badge: "/images/logo/icon-192x192.png",
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
-      primaryKey: 1
+      primaryKey: 1,
     },
     actions: [
       {
-        action: 'explore',
-        title: 'Read Now',
-        icon: '/images/icon-192.png'
+        action: "explore",
+        title: "Read Now",
+        icon: "/images/logo/icon-192x192.png",
       },
       {
-        action: 'close',
-        title: 'Close',
-        icon: '/images/icon-192.png'
-      }
-    ]
+        action: "close",
+        title: "Close",
+        icon: "/images/logo/icon-192x192.png",
+      },
+    ],
   };
 
   event.waitUntil(

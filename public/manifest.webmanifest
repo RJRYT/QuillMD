@@ -111,13 +111,13 @@
   "screenshots": [
     {
       "src": "/images/screenshot-wide.png",
-      "sizes": "1280x720",
+      "sizes": "1024x768",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
       "src": "/images/screenshot-narrow.png",
-      "sizes": "640x1136",
+      "sizes": "480x800",
       "type": "image/png",
       "form_factor": "narrow"
     }

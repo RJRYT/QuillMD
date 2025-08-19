@@ -1,10 +1,9 @@
 ---
 title: "Building a Backendless Blog with React and Vite"
-date: "2025-08-01T10:00:00.000Z"
+date: "2025-08-01"
 tags: ["React", "Vite", "JavaScript", "Static Site", "Blog"]
 excerpt: "Learn how to build a modern, SEO-friendly blog that runs entirely in the browser using React, Vite, and markdown files. No backend required!"
-cover: "/images/backendless-blog-cover.jpg"
-slug: "backendless-blog"
+cover: "/images/og-default.jpg"
 draft: false
 ---
 
@@ -56,7 +55,6 @@ date: "2025-08-01T10:00:00.000Z"
 tags: ["React", "JavaScript"]
 excerpt: "Brief description of your post"
 cover: "/images/cover.jpg"
-slug: "your-post-slug"
 draft: false
 ---
 ```
