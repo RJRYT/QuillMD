@@ -17,7 +17,7 @@ export function updateSEO({
   tags = [],
   author = 'Blog Author'
 } = {}) {
-  const baseTitle = 'Backendless Blog';
+  const baseTitle = 'QuillMD';
   const fullTitle = title ? `${title} | ${baseTitle}` : baseTitle;
   const siteUrl = window.location.origin;
   const fullUrl = url ? `${siteUrl}${url}` : window.location.href;
@@ -99,10 +99,10 @@ export function generateArticleStructuredData(post) {
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Backendless Blog",
+      "name": "QuillMD",
       "logo": {
         "@type": "ImageObject",
-        "url": `${siteUrl}/images/logo.png`
+        "url": `${siteUrl}/brand/quillmd-mark.svg`
       }
     },
     "datePublished": post.date,

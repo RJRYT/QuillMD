@@ -27,7 +27,7 @@ const HomePage = () => {
   useEffect(() => {
     updateSEO({
       title: currentPage > 1 ? `Page ${currentPage}` : '',
-      description: 'A modern backendless blog built with React, Vite, and Tailwind CSS. Discover articles about web development, technology, and more.',
+      description: 'QuillMD - A modern markdown-powered blogging platform built with React, Vite, and Tailwind CSS. Discover articles about web development, technology, and more.',
       url: currentPage > 1 ? `/page/${currentPage}` : '/',
       type: 'website'
     });
@@ -48,7 +48,7 @@ const HomePage = () => {
   if (posts.length === 0) {
     return (
       <div className="text-center py-12">
-        <h1 className="text-3xl font-bold mb-4">Welcome to Backendless Blog</h1>
+        <h1 className="text-3xl font-bold mb-4 text-gradient-primary">Welcome to QuillMD</h1>
         <p className="text-lg text-muted-foreground mb-8">
           No posts found. Add some posts to get started!
         </p>
@@ -66,11 +66,11 @@ const HomePage = () => {
         <section className="text-center space-fluid-xl glass-card glass-card-fallback rounded-2xl shadow-neumorphic-medium border overflow-hidden">
           <div className="max-w-4xl mx-auto p-8">
             <h1 className="text-fluid-4xl font-bold mb-6 text-gradient-primary leading-tight">
-              Welcome to Backendless Blog
+              Welcome to QuillMD
             </h1>
             <p className="text-fluid-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-              A modern blog built with React, Vite, and Tailwind CSS featuring glassmorphism design. 
-              No backend required, all content stored as markdown files with full PWA support.
+              A modern markdown-powered blogging platform featuring glassmorphism design. 
+              Write, publish, and share your thoughts with the world—no backend required.
             </p>
             <div className="flex flex-col sm:flex-row space-fluid-md justify-center">
               <Link to="/about">

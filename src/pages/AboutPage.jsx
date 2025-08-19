@@ -9,24 +9,24 @@ const AboutPage = () => {
   useEffect(() => {
     updateSEO({
       title: 'About',
-      description: 'Learn about this backendless blog built with React, Vite, and Tailwind CSS. A modern approach to content management without the complexity.',
+      description: 'Learn about QuillMD - a modern markdown-powered blogging platform built with React, Vite, and Tailwind CSS. A modern approach to content management without the complexity.',
       url: '/about',
       type: 'website'
     });
   }, []);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-12">
       {/* Hero Section */}
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold">About This Blog</h1>
+      <div className="text-center space-y-6 py-8">
+        <h1 className="text-4xl font-bold text-gradient-primary">About QuillMD</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          A modern, backendless blog built with React, Vite, and Tailwind CSS. 
+          A modern markdown-powered blogging platform built with React, Vite, and Tailwind CSS. 
           Demonstrating that you don't need complex infrastructure to create amazing web experiences.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
         {/* Project Info */}
         <Card>
           <CardHeader>

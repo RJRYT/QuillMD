@@ -28,12 +28,17 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 max-w-7xl">
+      <div className="container mx-auto px-4 max-w-4xl">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-4">
-            <Link to="/" className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors">
-              Backendless Blog
+          <div className="flex items-center space-x-2">
+            <img 
+              src="/brand/quillmd-mark.svg" 
+              alt="QuillMD" 
+              className="h-8 w-8"
+            />
+            <Link to="/" className="text-xl font-bold text-gradient-primary hover:opacity-80 transition-opacity">
+              QuillMD
             </Link>
           </div>
 

@@ -1,6 +1,6 @@
-# Backendless Blog
+# QuillMD
 
-A modern, SEO-friendly blog built with React, Vite, and Tailwind CSS. No backend required - all content is stored as markdown files and processed at build time.
+A modern, markdown-powered blogging platform built with React, Vite, and Tailwind CSS. No backend required - all content is stored as markdown files and processed at build time.
 
 ## ✨ Features
 
@@ -18,7 +18,7 @@ A modern, SEO-friendly blog built with React, Vite, and Tailwind CSS. No backend
 ```bash
 # Clone the repository
 git clone <your-repo-url>
-cd backendless-blog
+cd quillmd
 
 # Install dependencies
 npm install

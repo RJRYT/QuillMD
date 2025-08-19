@@ -2,8 +2,8 @@ import fs from 'fs';
 import { getAllPosts } from '../src/utils/posts.js';
 
 const SITE_URL = process.env.VITE_SITE_URL || 'https://your-blog.com';
-const SITE_NAME = 'Backendless Blog';
-const SITE_DESCRIPTION = 'A modern backendless blog built with React, Vite, and Tailwind CSS';
+const SITE_NAME = 'QuillMD';
+const SITE_DESCRIPTION = 'A modern markdown-powered blogging platform built with React, Vite, and Tailwind CSS';
 
 function generateRSS() {
   const posts = getAllPosts().slice(0, 20); // Latest 20 posts

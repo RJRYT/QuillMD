@@ -1,7 +1,7 @@
 {
   "name": "QuillMD",
   "short_name": "QuillMD",
-  "description": "QuillMD — A modern backendless blog powered by React, Vite, and Tailwind CSS.",
+  "description": "QuillMD — A modern markdown-powered blogging platform built with React, Vite, and Tailwind CSS.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
