@@ -19,10 +19,13 @@ const AboutPage = () => {
     <div className="space-y-12">
       {/* Hero Section */}
       <div className="text-center space-y-6 py-8">
-        <h1 className="text-4xl font-bold text-gradient-primary">About QuillMD</h1>
+        <h1 className="text-4xl font-bold text-gradient-primary">
+          About QuillMD
+        </h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          A modern markdown-powered blogging platform built with React, Vite, and Tailwind CSS. 
-          Demonstrating that you don't need complex infrastructure to create amazing web experiences.
+          A modern markdown-powered blogging platform built with React, Vite,
+          and Tailwind CSS. Demonstrating that you don't need complex
+          infrastructure to create amazing web experiences.
         </p>
       </div>
 
@@ -34,11 +37,11 @@ const AboutPage = () => {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              This blog is a complete demonstration of modern web development practices, 
-              showcasing how to build a feature-rich content management system that runs 
-              entirely in the browser.
+              This blog is a complete demonstration of modern web development
+              practices, showcasing how to build a feature-rich content
+              management system that runs entirely in the browser.
             </p>
-            
+
             <div className="space-y-2">
               <h4 className="font-medium">Key Features:</h4>
               <ul className="text-sm text-muted-foreground space-y-1">
@@ -63,27 +66,37 @@ const AboutPage = () => {
             <div className="space-y-3">
               <div>
                 <h4 className="font-medium">Frontend</h4>
-                <p className="text-sm text-muted-foreground">React 18 with functional components and hooks</p>
+                <p className="text-sm text-muted-foreground">
+                  React 18 with functional components and hooks
+                </p>
               </div>
-              
+
               <div>
                 <h4 className="font-medium">Build Tool</h4>
-                <p className="text-sm text-muted-foreground">Vite for lightning-fast development and optimized builds</p>
+                <p className="text-sm text-muted-foreground">
+                  Vite for lightning-fast development and optimized builds
+                </p>
               </div>
-              
+
               <div>
                 <h4 className="font-medium">Styling</h4>
-                <p className="text-sm text-muted-foreground">Tailwind CSS with custom design system</p>
+                <p className="text-sm text-muted-foreground">
+                  Tailwind CSS with custom design system
+                </p>
               </div>
-              
+
               <div>
                 <h4 className="font-medium">Content</h4>
-                <p className="text-sm text-muted-foreground">Markdown files with YAML frontmatter</p>
+                <p className="text-sm text-muted-foreground">
+                  Markdown files with YAML frontmatter
+                </p>
               </div>
-              
+
               <div>
                 <h4 className="font-medium">Search</h4>
-                <p className="text-sm text-muted-foreground">Fuse.js for client-side fuzzy search</p>
+                <p className="text-sm text-muted-foreground">
+                  Fuse.js for client-side fuzzy search
+                </p>
               </div>
             </div>
           </CardContent>
@@ -99,24 +112,25 @@ const AboutPage = () => {
               <div>
                 <h4 className="font-medium">Backendless</h4>
                 <p className="text-sm text-muted-foreground">
-                  No server-side code or database required. Everything runs in the browser.
+                  No server-side code or database required. Everything runs in
+                  the browser.
                 </p>
               </div>
-              
+
               <div>
                 <h4 className="font-medium">Static Generation</h4>
                 <p className="text-sm text-muted-foreground">
                   Content is processed at build time for optimal performance.
                 </p>
               </div>
-              
+
               <div>
                 <h4 className="font-medium">JAMstack</h4>
                 <p className="text-sm text-muted-foreground">
                   JavaScript, APIs, and Markup for a modern web architecture.
                 </p>
               </div>
-              
+
               <div>
                 <h4 className="font-medium">Progressive Enhancement</h4>
                 <p className="text-sm text-muted-foreground">
@@ -134,13 +148,14 @@ const AboutPage = () => {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground">
-              Want to create your own version? This blog is open source and can be easily customized.
+              Want to create your own version? This blog is open source and can
+              be easily customized.
             </p>
-            
+
             <div className="space-y-2">
               <h4 className="font-medium">Quick Start:</h4>
-              <div className="bg-muted p-3 rounded-md font-mono text-sm">
-                <div>git clone &lt;repository&gt;</div>
+              <div className="bg-muted p-3 rounded-md font-mono text-sm wrap-anywhere">
+                <div>git clone https://github.com/RJRYT/QuillMD</div>
                 <div>npm install</div>
                 <div>npm run dev</div>
               </div>
@@ -148,7 +163,11 @@ const AboutPage = () => {
 
             <div className="flex flex-wrap gap-2">
               <Button variant="outline" size="sm" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/RJRYT/QuillMD"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Github className="h-4 w-4 mr-2" />
                   View Source
                 </a>
@@ -174,21 +193,24 @@ const AboutPage = () => {
             <div className="space-y-2">
               <h4 className="font-medium">GitHub Pages</h4>
               <p className="text-sm text-muted-foreground">
-                Free hosting for public repositories. Automatic deployments from your repo.
+                Free hosting for public repositories. Automatic deployments from
+                your repo.
               </p>
             </div>
-            
+
             <div className="space-y-2">
               <h4 className="font-medium">Vercel</h4>
               <p className="text-sm text-muted-foreground">
-                Zero-configuration deployments with automatic optimizations and global CDN.
+                Zero-configuration deployments with automatic optimizations and
+                global CDN.
               </p>
             </div>
-            
+
             <div className="space-y-2">
               <h4 className="font-medium">Netlify</h4>
               <p className="text-sm text-muted-foreground">
-                Drag-and-drop deployments with powerful build tools and form handling.
+                Drag-and-drop deployments with powerful build tools and form
+                handling.
               </p>
             </div>
           </div>
@@ -203,19 +225,27 @@ const AboutPage = () => {
         <CardContent>
           <div className="flex flex-wrap gap-4">
             <Button variant="outline" size="sm" asChild>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://github.com/rjryt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Github className="h-4 w-4 mr-2" />
                 GitHub
               </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://twitter.com/rjryt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Twitter className="h-4 w-4 mr-2" />
                 Twitter
               </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
-              <a href="mailto:hello@example.com">
+              <a href="mailto:rjryt@outlook.com">
                 <Mail className="h-4 w-4 mr-2" />
                 Email
               </a>

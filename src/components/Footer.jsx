@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Github, Twitter, Rss } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,40 +11,51 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="flex flex-col items-center space-y-4">
             <div className="flex items-center space-x-2">
-              <img 
-                src="/brand/quillmd-mark.svg" 
-                alt="QuillMD" 
-                className="h-8 w-8"
+              <img
+                src="/brand/quillmd-horizontal.svg"
+                alt="QuillMD"
+                className="h-30 w-auto"
               />
-              <span className="text-xl font-bold text-gradient-primary">QuillMD</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-md">
-              A modern markdown-powered blogging platform. 
-              Write, publish, and share your thoughts with the world.
+              A modern markdown-powered blogging platform. Write, publish, and
+              share your thoughts with the world.
             </p>
           </div>
 
           {/* Links */}
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
-            <Link to="/" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              to="/"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               Home
             </Link>
-            <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+            <Link
+              to="/about"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
               About
             </Link>
-            <a 
-              href="https://github.com" 
-              target="_blank" 
+            <a
+              href="https://github.com/RJRYT/QuillMD"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               GitHub
             </a>
-            <a 
-              href="/rss.xml" 
+            <a
+              href="/rss.xml"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               RSS
+            </a>
+            <a
+              href="/sitemap.xml"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Sitemap
             </a>
           </div>
 
