@@ -27,7 +27,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <PWAInstallPrompt />
-        <BrowserRouter>
+        <BrowserRouter basename="/QuillMD">
           <Layout>
             <Routes>
               <Route path="/" element={<HomePage />} />

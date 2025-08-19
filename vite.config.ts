@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
-  base: mode === "development" ? "/" : "/quillmd/",
+  base: mode === "development" ? "/" : "/QuillMD/",
   plugins: [
     react(),
     tailwindcss(),
