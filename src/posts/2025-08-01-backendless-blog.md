@@ -3,7 +3,7 @@ title: "Building a Backendless Blog with React and Vite"
 date: "2025-08-01"
 tags: ["React", "Vite", "JavaScript", "Static Site", "Blog"]
 excerpt: "Learn how to build a modern, SEO-friendly blog that runs entirely in the browser using React, Vite, and markdown files. No backend required!"
-cover: "/src/assets/backendless-blog.jpg"
+cover: "/images/backendless-blog.jpg"
 draft: false
 ---
 

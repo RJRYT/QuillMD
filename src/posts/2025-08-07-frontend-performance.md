@@ -4,7 +4,7 @@ date: "2025-08-07"
 tags: ["Performance", "Frontend", "Optimization", "Web Development", "User Experience"]
 excerpt: "Discover the most common frontend performance bottlenecks that slow down your website and learn practical solutions to fix them. Improve your site's Core Web Vitals and user experience."
 author: "QuillMD Team"
-cover: "/src/assets/frontend-performance.jpg"
+cover: "/images/frontend-performance.jpg"
 draft: false
 ---
 

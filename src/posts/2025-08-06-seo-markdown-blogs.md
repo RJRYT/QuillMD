@@ -4,7 +4,7 @@ date: "2025-08-06"
 tags: ["SEO", "Markdown", "Content Strategy", "Blog Writing", "Search Optimization"]
 excerpt: "Master the art of writing SEO-optimized markdown blog posts. Learn how to structure content, optimize metadata, and leverage markdown syntax for better search engine rankings."
 author: "QuillMD Team"
-cover: "/src/assets/seo-markdown-blogs.jpg"
+cover: "/images/seo-markdown-blogs.jpg"
 draft: false
 ---
 

@@ -4,7 +4,7 @@ date: "2025-08-05"
 tags: ["GitHub Actions", "CI/CD", "Vite", "Deployment", "Automation"]
 excerpt: "Learn how to set up automated deployment for your Vite projects using GitHub Actions. From basic workflows to advanced deployment strategies across multiple environments."
 author: "QuillMD Team"
-cover: "/src/assets/github-actions-deploy.jpg"
+cover: "/images/github-actions-deploy.jpg"
 draft: false
 ---
 

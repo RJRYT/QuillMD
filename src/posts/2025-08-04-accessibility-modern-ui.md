@@ -3,7 +3,7 @@ title: "Accessibility in Modern UI Design: Beyond Compliance"
 date: "2025-08-04"
 tags: ["accessibility", "a11y", "ux", "inclusive-design"]
 excerpt: "Discover how to create truly inclusive interfaces that go beyond WCAG compliance to provide exceptional experiences for all users."
-cover: "/src/assets/accessibility-modern-ui.jpg"
+cover: "/images/accessibility-modern-ui.jpg"
 draft: false
 ---
 

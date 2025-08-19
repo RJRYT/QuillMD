@@ -3,7 +3,7 @@ title: "Building Responsive Grid Systems with CSS Grid and Container Queries"
 date: "2025-08-03"
 tags: ["css", "responsive", "grid", "layout"]
 excerpt: "Learn how to create flexible, responsive grid layouts using modern CSS Grid features and container queries for truly adaptive designs."
-cover: "/src/assets/responsive-grid-systems.jpg"
+cover: "/images/responsive-grid-systems.jpg"
 draft: false
 ---
 

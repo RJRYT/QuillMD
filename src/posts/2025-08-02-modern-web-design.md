@@ -3,7 +3,7 @@ title: "Modern Web Design Trends: Glassmorphism and Neumorphism"
 date: "2025-08-02"
 tags: ["design", "ui", "trends", "glassmorphism"]
 excerpt: "Explore the latest web design trends including glassmorphism effects, neumorphic interfaces, and how they create engaging user experiences."
-cover: "/src/assets/modern-web-design.jpg"
+cover: "/images/modern-web-design.jpg"
 draft: false
 ---
 
