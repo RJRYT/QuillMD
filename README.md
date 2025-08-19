@@ -17,7 +17,7 @@ A modern, markdown-powered blogging platform built with React, Vite, and Tailwin
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/RJRYT/QuillMD
 cd quillmd
 
 # Install dependencies
@@ -31,10 +31,6 @@ npm run build
 
 # Preview production build
 npm run preview
-
-# Generate sitemap and RSS
-npm run generate-sitemap
-npm run generate-rss
 
 # Run tests
 npm test
@@ -70,7 +66,6 @@ date: "2025-08-01T10:00:00.000Z"
 tags: ["React", "JavaScript"]
 excerpt: "Brief description"
 cover: "/images/cover.jpg"
-slug: "your-post-slug"
 draft: false
 ---
 
@@ -166,8 +161,6 @@ npm run test:coverage
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
-- `npm run generate-sitemap` - Generate sitemap.xml
-- `npm run generate-rss` - Generate RSS feed
 - `npm test` - Run tests
 
 ## 🤝 Contributing
@@ -184,7 +177,7 @@ MIT License - feel free to use this project for your own blog!
 
 ## 🆘 Support
 
-- Check the [issues](https://github.com/your-repo/issues) for common problems
+- Check the [issues](https://github.com/RJRYT/QuillMD/issues) for common problems
 - Create a new issue for bugs or feature requests
 - Read the [documentation](https://vitejs.dev/) for Vite-specific questions
 
