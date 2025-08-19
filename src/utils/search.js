@@ -122,7 +122,7 @@ export function highlightSearchTerms(text, query) {
   
   searchTerms.forEach(term => {
     const regex = new RegExp(`(${term})`, 'gi');
-    highlightedText = highlightedText.replace(regex, '<mark class="bg-accent/20 px-1 rounded">$1</mark>');
+    highlightedText = highlightedText.replace(regex, '<mark class="bg-accent/20 px-1 rounded-sm">$1</mark>');
   });
   
   return highlightedText;

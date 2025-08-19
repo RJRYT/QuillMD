@@ -94,13 +94,13 @@ const PostPage = () => {
   if (loading) {
     return (
       <div className="space-y-4">
-        <div className="h-8 bg-muted rounded animate-pulse" />
-        <div className="h-4 bg-muted rounded animate-pulse w-3/4" />
-        <div className="h-4 bg-muted rounded animate-pulse w-1/2" />
+        <div className="h-8 bg-muted rounded-sm animate-pulse" />
+        <div className="h-4 bg-muted rounded-sm animate-pulse w-3/4" />
+        <div className="h-4 bg-muted rounded-sm animate-pulse w-1/2" />
         <div className="space-y-2">
-          <div className="h-4 bg-muted rounded animate-pulse" />
-          <div className="h-4 bg-muted rounded animate-pulse" />
-          <div className="h-4 bg-muted rounded animate-pulse w-3/4" />
+          <div className="h-4 bg-muted rounded-sm animate-pulse" />
+          <div className="h-4 bg-muted rounded-sm animate-pulse" />
+          <div className="h-4 bg-muted rounded-sm animate-pulse w-3/4" />
         </div>
       </div>
     );

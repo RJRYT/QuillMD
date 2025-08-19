@@ -73,7 +73,7 @@ const Sidebar = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full px-3 py-2 text-sm border border-input rounded-md bg-background focus:outline-none focus:ring-2 focus:ring-ring"
+              className="w-full px-3 py-2 text-sm border border-input rounded-md bg-background focus:outline-hidden focus:ring-2 focus:ring-ring"
             />
             <button className="w-full px-3 py-2 text-sm font-medium text-primary-foreground bg-primary rounded-md hover:bg-primary/90 transition-colors shadow-neumorphic-light hover:shadow-neumorphic-medium">
               Subscribe

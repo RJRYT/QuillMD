@@ -17,7 +17,7 @@ const PostCard = ({ post, showExcerpt = true, className = '', isLoading = false 
   const readingTime = Math.ceil(post.content.split(' ').length / 200);
 
   return (
-    <Card 
+    <Card
       className={`blog-card glass-card glass-card-fallback rounded-xl shadow-neumorphic-light hover:shadow-neumorphic-medium transition-all duration-300 overflow-hidden ${className}`}
       role="article"
       aria-label={`Blog post: ${post.title}`}
@@ -34,7 +34,7 @@ const PostCard = ({ post, showExcerpt = true, className = '', isLoading = false 
                 src={post.cover}
                 alt={post.title}
                 className={`w-full h-full object-cover transition-all duration-500 ${
-                  imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'
+                  imageLoaded ? "opacity-100 scale-100" : "opacity-0 scale-105"
                 } group-hover:scale-105`}
                 loading="lazy"
                 onLoad={() => setImageLoaded(true)}
@@ -58,8 +58,8 @@ const PostCard = ({ post, showExcerpt = true, className = '', isLoading = false 
             <div className="flex flex-wrap space-fluid-xs">
               {post.tags.slice(0, 3).map((tag) => (
                 <Link key={tag} to={`/tag/${encodeURIComponent(tag)}`}>
-                  <Badge 
-                    variant="secondary" 
+                  <Badge
+                    variant="secondary"
                     className="text-fluid-xs px-2 py-1 rounded-full hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                   >
                     {tag}
@@ -67,7 +67,10 @@ const PostCard = ({ post, showExcerpt = true, className = '', isLoading = false 
                 </Link>
               ))}
               {post.tags.length > 3 && (
-                <Badge variant="outline" className="text-fluid-xs px-2 py-1 rounded-full">
+                <Badge
+                  variant="outline"
+                  className="text-fluid-xs px-2 py-1 rounded-full"
+                >
                   +{post.tags.length - 3}
                 </Badge>
               )}
@@ -76,9 +79,9 @@ const PostCard = ({ post, showExcerpt = true, className = '', isLoading = false 
 
           {/* Title */}
           <h2 className="text-fluid-xl font-bold leading-tight text-gradient-primary">
-            <Link 
+            <Link
               to={`/post/${post.slug}`}
-              className="hover:opacity-80 transition-opacity duration-200"
+              className="hover:text-gradient-primary-rev transition-colors duration-700"
               aria-label={`Read article: ${post.title}`}
             >
               {post.title}
@@ -90,10 +93,10 @@ const PostCard = ({ post, showExcerpt = true, className = '', isLoading = false 
             <div className="flex items-center gap-1">
               <Calendar className="h-3 w-3" />
               <time dateTime={post.date}>
-                {new Date(post.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'short',
-                  day: 'numeric'
+                {new Date(post.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "short",
+                  day: "numeric",
                 })}
               </time>
             </div>

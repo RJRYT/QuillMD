@@ -1,64 +1,150 @@
 @import "tailwindcss";
 
-/* Frost+Soft Design System - Modern Glassmorphism with Responsive Typography */
+@theme {
+  /* Colors (map Tailwind color tokens to your CSS vars) */
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  /* Sidebar group */
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  /* Radii (map borderRadius tokens) */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Grid / gap / card width */
+  --grid-gap: var(--grid-gap);
+  --card-min-width: var(--card-min-width);
+
+  /* Gap token (used as `gap-fluid` in Tailwind) */
+  --gap-fluid: var(--grid-gap);
+
+  /* Font sizes (fluid tokens used by text-fluid-*) */
+  --text-fluid-xs: var(--text-xs);
+  --text-fluid-sm: var(--text-sm);
+  --text-fluid-base: var(--text-base);
+  --text-fluid-lg: var(--text-lg);
+  --text-fluid-xl: var(--text-xl);
+  --text-fluid-2xl: var(--text-2xl);
+  --text-fluid-3xl: var(--text-3xl);
+  --text-fluid-4xl: var(--text-4xl);
+
+  /* Spacing tokens (used as p-/m- spacing if you created spacing keys) */
+  --spacing-fluid-xs: var(--space-xs);
+  --spacing-fluid-sm: var(--space-sm);
+  --spacing-fluid-md: var(--space-md);
+  --spacing-fluid-lg: var(--space-lg);
+  --spacing-fluid-xl: var(--space-xl);
+  --spacing-fluid-2xl: var(--space-2xl);
+
+  /* Keyframe / animation tokens (Tailwind's animation names still map to @keyframes) */
+  /* We still define the animation name string here so you can inspect/use it if needed */
+  --anim-accordion-down: "accordion-down 0.2s ease-out";
+  --anim-accordion-up: "accordion-up 0.2s ease-out";
+}
 
 @layer base {
   :root {
     /* Core Colors - Frost+Soft Theme */
     --background: 210 15% 98%;
     --foreground: 215 28% 17%;
-    
+
     /* Glass Surface Effects */
     --glass-background: 210 40% 98%;
     --glass-border: 210 25% 88%;
     --glass-shadow: 215 25% 27%;
-    
+
     /* Content Areas */
     --card: 210 40% 98%;
     --card-foreground: 215 28% 17%;
     --card-glass: 210 40% 98% / 0.8;
     --card-glass-border: 210 25% 88% / 0.3;
-    
+
     --popover: 210 40% 98%;
     --popover-foreground: 215 28% 17%;
-    
+
     /* Brand Colors - Soft Blue Gradient */
     --primary: 215 84% 32%;
     --primary-foreground: 0 0% 100%;
     --primary-soft: 215 60% 55%;
-    --primary-gradient: linear-gradient(135deg, hsl(215, 84%, 32%), hsl(215, 60%, 55%));
-    
+    --primary-gradient: linear-gradient(
+      135deg,
+      hsl(215, 84%, 32%),
+      hsl(215, 60%, 55%)
+    );
+    --primary-gradient-rev: linear-gradient(
+      135deg,
+      hsl(215, 60%, 55%),
+      hsl(215, 84%, 32%)
+    );
+
     /* Accent Gradients */
     --secondary: 215 16% 96%;
     --secondary-foreground: 215 28% 17%;
-    
+
     --muted: 215 16% 96%;
     --muted-foreground: 215 14% 54%;
-    
+
     --accent: 25 95% 53%;
     --accent-foreground: 0 0% 100%;
     --accent-soft: 25 75% 65%;
-    --accent-gradient: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(25, 75%, 65%));
-    
+    --accent-gradient: linear-gradient(
+      135deg,
+      hsl(25, 95%, 53%),
+      hsl(25, 75%, 65%)
+    );
+
     /* Status Colors */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-    
+
     /* Interactive Elements */
     --border: 215 20% 88%;
     --input: 215 20% 88%;
     --ring: 215 84% 32%;
-    
+
     /* Neumorphic Shadows */
     --shadow-neumorphic-light: 0 8px 32px -8px hsl(215 25% 27% / 0.1);
     --shadow-neumorphic-medium: 0 16px 48px -12px hsl(215 25% 27% / 0.15);
     --shadow-neumorphic-heavy: 0 24px 64px -16px hsl(215 25% 27% / 0.2);
-    
+
     /* Design System */
     --radius: 0.75rem;
     --radius-lg: 1rem;
     --radius-xl: 1.5rem;
-    
+
     /* Fluid Typography */
     --text-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem);
     --text-sm: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
@@ -68,7 +154,7 @@
     --text-2xl: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
     --text-3xl: clamp(1.875rem, 1.6rem + 1vw, 2.5rem);
     --text-4xl: clamp(2.25rem, 1.9rem + 1.4vw, 3rem);
-    
+
     /* Spacing System */
     --space-xs: clamp(0.5rem, 0.4rem + 0.4vw, 0.75rem);
     --space-sm: clamp(0.75rem, 0.6rem + 0.6vw, 1rem);
@@ -76,12 +162,12 @@
     --space-lg: clamp(1.5rem, 1.2rem + 1.2vw, 2rem);
     --space-xl: clamp(2rem, 1.6rem + 1.6vw, 3rem);
     --space-2xl: clamp(3rem, 2.4rem + 2.4vw, 4rem);
-    
+
     /* Blog-specific tokens */
     --content-width: 65ch;
     --sidebar-width: 20rem;
     --header-height: 4rem;
-    
+
     /* Grid System */
     --grid-gap: clamp(1rem, 2vw, 2rem);
     --card-min-width: 280px;
@@ -100,51 +186,72 @@
     /* Dark theme - Frost+Soft */
     --background: 215 28% 8%;
     --foreground: 215 20% 92%;
-    
+
     /* Glass Surface Effects - Dark */
     --glass-background: 215 28% 10%;
     --glass-border: 215 25% 25%;
     --glass-shadow: 215 50% 5%;
-    
+
     --card: 215 28% 10%;
     --card-foreground: 215 20% 92%;
     --card-glass: 215 28% 10% / 0.8;
     --card-glass-border: 215 25% 25% / 0.3;
-    
+
     --popover: 215 28% 10%;
     --popover-foreground: 215 20% 92%;
-    
+
     --primary: 215 84% 55%;
     --primary-foreground: 215 28% 8%;
     --primary-soft: 215 60% 70%;
-    --primary-gradient: linear-gradient(135deg, hsl(215, 84%, 55%), hsl(215, 60%, 70%));
-    
+    --primary-gradient: linear-gradient(
+      135deg,
+      hsl(215, 84%, 55%),
+      hsl(215, 60%, 70%)
+    );
+    --primary-gradient-rev: linear-gradient(
+      135deg,
+      hsl(215, 60%, 70%),
+      hsl(215, 84%, 55%)
+    );
+
     --secondary: 215 28% 15%;
     --secondary-foreground: 215 20% 92%;
-    
+
     --muted: 215 28% 15%;
     --muted-foreground: 215 16% 65%;
-    
+
     --accent: 25 95% 53%;
     --accent-foreground: 215 28% 8%;
     --accent-soft: 25 75% 65%;
-    --accent-gradient: linear-gradient(135deg, hsl(25, 95%, 53%), hsl(25, 75%, 65%));
-    
+    --accent-gradient: linear-gradient(
+      135deg,
+      hsl(25, 95%, 53%),
+      hsl(25, 75%, 65%)
+    );
+
     --destructive: 0 84% 60%;
     --destructive-foreground: 215 20% 92%;
-    
+
     --border: 215 28% 20%;
     --input: 215 28% 20%;
     --ring: 215 84% 55%;
-    
+
     /* Neumorphic Shadows - Dark */
     --shadow-neumorphic-light: 0 8px 32px -8px hsl(215 50% 5% / 0.3);
     --shadow-neumorphic-medium: 0 16px 48px -12px hsl(215 50% 5% / 0.4);
     --shadow-neumorphic-heavy: 0 24px 64px -16px hsl(215 50% 5% / 0.5);
   }
-}
 
-@layer base {
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-input);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
   * {
     border-color: hsl(var(--border));
   }
@@ -153,105 +260,172 @@
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
   }
-  
+
   /* Fluid Typography Classes */
-  .text-fluid-xs { font-size: var(--text-xs); }
-  .text-fluid-sm { font-size: var(--text-sm); }
-  .text-fluid-base { font-size: var(--text-base); }
-  .text-fluid-lg { font-size: var(--text-lg); }
-  .text-fluid-xl { font-size: var(--text-xl); }
-  .text-fluid-2xl { font-size: var(--text-2xl); }
-  .text-fluid-3xl { font-size: var(--text-3xl); }
-  .text-fluid-4xl { font-size: var(--text-4xl); }
-  
+  .text-fluid-xs {
+    font-size: var(--text-xs);
+  }
+  .text-fluid-sm {
+    font-size: var(--text-sm);
+  }
+  .text-fluid-base {
+    font-size: var(--text-base);
+  }
+  .text-fluid-lg {
+    font-size: var(--text-lg);
+  }
+  .text-fluid-xl {
+    font-size: var(--text-xl);
+  }
+  .text-fluid-2xl {
+    font-size: var(--text-2xl);
+  }
+  .text-fluid-3xl {
+    font-size: var(--text-3xl);
+  }
+  .text-fluid-4xl {
+    font-size: var(--text-4xl);
+  }
+
   /* Fluid Spacing Classes */
-  .space-fluid-xs { gap: var(--space-xs); }
-  .space-fluid-sm { gap: var(--space-sm); }
-  .space-fluid-md { gap: var(--space-md); }
-  .space-fluid-lg { gap: var(--space-lg); }
-  .space-fluid-xl { gap: var(--space-xl); }
-  .space-fluid-2xl { gap: var(--space-2xl); }
+  .space-fluid-xs {
+    gap: var(--space-xs);
+  }
+  .space-fluid-sm {
+    gap: var(--space-sm);
+  }
+  .space-fluid-md {
+    gap: var(--space-md);
+  }
+  .space-fluid-lg {
+    gap: var(--space-lg);
+  }
+  .space-fluid-xl {
+    gap: var(--space-xl);
+  }
+  .space-fluid-2xl {
+    gap: var(--space-2xl);
+  }
 }
 
-@layer components {
-  /* Frost+Soft Blog Grid System */
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
-    gap: var(--grid-gap);
-  }
-  
-  /* Glass Morphism Effects */
-  .glass-card {
-    background: hsl(var(--card-glass));
-    border: 1px solid hsl(var(--card-glass-border));
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-  
-  .glass-card-fallback {
-    background: hsl(var(--card));
-    border: 1px solid hsl(var(--border));
-  }
-  
-  /* Neumorphic Shadows */
-  .shadow-neumorphic-light { box-shadow: var(--shadow-neumorphic-light); }
-  .shadow-neumorphic-medium { box-shadow: var(--shadow-neumorphic-medium); }
-  .shadow-neumorphic-heavy { box-shadow: var(--shadow-neumorphic-heavy); }
-  
-  /* Gradient Text */
-  .text-gradient-primary {
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  
-  .text-gradient-accent {
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-  
-  /* Blog Card Hover Effects */
-  .blog-card {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform: translateY(0);
-  }
-  
-  .blog-card:hover {
+@utility animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+@utility animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+@utility blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
+  gap: var(--grid-gap);
+}
+
+@utility glass-card {
+  background: hsl(var(--card-glass));
+  border: 1px solid hsl(var(--card-glass-border));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@utility glass-card-fallback {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+}
+
+@utility shadow-neumorphic-light {
+  box-shadow: var(--shadow-neumorphic-light);
+}
+@utility shadow-neumorphic-medium {
+  box-shadow: var(--shadow-neumorphic-medium);
+}
+@utility shadow-neumorphic-heavy {
+  box-shadow: var(--shadow-neumorphic-heavy);
+}
+
+@utility text-gradient-primary {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility text-gradient-primary-rev {
+  background: var(--primary-gradient-rev);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility text-gradient-accent {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility blog-card {
+  transition: transform 0.18s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.18s;
+  transform: translateY(0);
+  /* keep border-radius from tokens if you want */
+  border-radius: var(--radius);
+
+  @variant hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-neumorphic-medium);
   }
-  
-  /* Container Queries Fallback */
-  @container (max-width: 400px) {
-    .blog-card-responsive {
-      flex-direction: column;
-    }
-  }
-  
-  /* Focus States for Accessibility */
-  .blog-card:focus-within {
+
+  @variant focus-within {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
   }
-  
-  /* Skeleton Loading Animation */
-  .skeleton {
-    background: linear-gradient(
-      90deg,
-      hsl(var(--muted)) 25%,
-      hsl(var(--muted) / 0.5) 50%,
-      hsl(var(--muted)) 75%
-    );
-    background-size: 200% 100%;
-    animation: skeleton-loading 1.5s infinite;
+}
+
+.blog-card-responsive {
+  display: flex; /* default layout */
+  gap: var(--space-sm);
+}
+
+@container (max-width: 400px) {
+  .blog-card-responsive {
+    flex-direction: column;
   }
-  
-  @keyframes skeleton-loading {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
+}
+
+@utility skeleton {
+  background: linear-gradient(
+    90deg,
+    hsl(var(--muted)) 25%,
+    hsl(var(--muted) / 0.5) 50%,
+    hsl(var(--muted)) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s infinite linear;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
   }
 }
